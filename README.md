@@ -3,6 +3,9 @@
 High-performance weather dashboard built with React and Feature-Sliced Design.
 Focused on efficient network usage, optimized assets, and scalable architecture.
 
+# Demo version
+Link: https://weather-now-dashboard.vercel.app/
+
 ## Performance & Optimization
 This project was engineered for speed and efficiency, especially for low-bandwidth environments:
 
@@ -17,8 +20,8 @@ This project was engineered for speed and efficiency, especially for low-bandwid
 * State Management: Redux Toolkit + RTK Query (automated server state & caching).
 * Styling: SCSS with CSS Modules for scoped and maintainable styles.
 
-## Встановлення
-1. Clone the repository: `git clone [посилання]`
+## Installation
+1. Clone the repository: `git clone https://github.com/TiN0X/weather-now-dashboard.git`
 2. Copy the contents of `.env.example` to `.env.local`
 3. Install dependencies: `npm install`
 4. Run development server: `npm run dev`
