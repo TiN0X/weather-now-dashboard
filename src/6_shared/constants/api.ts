@@ -1,0 +1,15 @@
+
+export const WEATHER_API = {
+  BASE: import.meta.env.VITE_WEATHER_API_BASE_URL,
+  FORECAST: import.meta.env.VITE_WEATHER_API_FORECAST_ENDPOINT,
+}
+
+export const GEOLOCATION_API = {
+  BASE: import.meta.env.VITE_GEOLOCATION_API_BASE_URL,
+  REVERSE: import.meta.env.VITE_GEOLOCATION_API_REVERSE_ENDPOINT,
+}
+
+export const GEOCODING_API = {
+  BASE: import.meta.env.VITE_GEOCODING_API_BASE_URL,
+  SEARCH: import.meta.env.VITE_GEOCODING_API_SEARCH_ENDPOINT,
+}
