@@ -1,29 +1,23 @@
-# Складання та залежності
 node_modules
 dist
 dist-ssr
 *.local
 
-# Змінні оточення (Environment variables) - ХОВАЄМО ВІД ГІТА
 .env
 .env.development
 .env.production
 .env.test
-# НЕ додаємо сюди .env.example, він має бути в Гіті!
 
-# Системні файли (Linux/ThinkPad)
 .DS_Store
 .fuse_hidden*
 .directory
 .Trash-*
 
-# Логи
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 
-# Налаштування редакторів
 .vscode/*
 !.vscode/extensions.json
 .idea
