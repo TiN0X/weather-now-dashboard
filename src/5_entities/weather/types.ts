@@ -4,6 +4,7 @@ export type LocationBannerProps = {
   country: string | undefined,
   date: string,
   temp: string,
+  isDay: boolean,
 }
 
 export type DailyForecastItemProps = {
@@ -16,6 +17,7 @@ export type HourlyForecastItemProps = {
   hour: string,
   temp: string,
   icon: string,
+  isNight: boolean,
 }
 
 export type GeocodingCity = {

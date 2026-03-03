@@ -11,12 +11,13 @@ import {getTemperatureUnit} from '@entities/units/model/selectors.ts'
 import {formatTemp} from '@entities/weather/model/utils/convertWeather.ts'
 import {useFormattedHourlyForecast} from '@widgets/hourlyForecastWidget/model/useFormattedHourlyForecast.ts'
 import {convertWeekdayToLong} from '@widgets/hourlyForecastWidget/model/utils/convertWeekdayToLong.ts'
+import iconMoon from '@shared/assets/images/moon-icon.webp'
 
 const HourlyForecastWidget: React.FC<HourlyForecastWidgetProps> = ({ hourly, daily }) => {
   const [ selectedDay, setSelectedDay ] = useState(daily[0]?.id ?? '')
   const temperatureInit = useSelector(getTemperatureUnit)
 
-  const { fullDayName, filteredHours } = useFormattedHourlyForecast(hourly, daily, selectedDay)
+  const { fullDayName, filteredHours, checkIsNight } = useFormattedHourlyForecast(hourly, daily, selectedDay)
 
   return (
     <Card className={classes.hourlyForecastWidget} background={'primary'} isBorder>
@@ -38,7 +39,7 @@ const HourlyForecastWidget: React.FC<HourlyForecastWidgetProps> = ({ hourly, dai
         <ul className={classes.hourlyForecastWidgetList}>
           {filteredHours.map(item => (
             <li className='hourlyForecastItem' key={item.id}>
-              <HourlyForecastItem icon={getIconByCode(item.icon)} hour={item.formattedHour} temp={formatTemp(item.temp, temperatureInit)} />
+              <HourlyForecastItem icon={checkIsNight(item.rawDate) ? iconMoon : getIconByCode(item.icon)} isNight={checkIsNight(item.rawDate)} hour={item.formattedHour} temp={formatTemp(item.temp, temperatureInit)} />
             </li>
           ))}
         </ul>

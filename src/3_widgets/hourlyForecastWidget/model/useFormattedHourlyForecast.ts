@@ -25,7 +25,11 @@ export const useFormattedHourlyForecast = (hourly: HourlyForecast[], daily: Dail
     })
   }, [hourly, selectedDay])
 
+  const checkIsNight = (currentHour: Date) => {
+    const hour = new Date(currentHour).getHours()
 
+    return hour < 6 || hour >= 20
+  }
 
   const selectedDayData = useMemo(() => {
     return daily.find(item  => item.id === selectedDay)
@@ -40,5 +44,5 @@ export const useFormattedHourlyForecast = (hourly: HourlyForecast[], daily: Dail
 
 
 
-  return { filteredHours, fullDayName }
+  return { filteredHours, fullDayName, checkIsNight }
 }
