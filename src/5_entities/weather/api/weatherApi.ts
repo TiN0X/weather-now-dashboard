@@ -12,6 +12,7 @@ export const weatherApi = createApi({
         params: {
           latitude: lat,
           longitude: lon,
+          timezone: 'auto',
           daily: 'weather_code,temperature_2m_max,temperature_2m_min',
           hourly: 'temperature_2m,weather_code',
           current: 'temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code,precipitation,apparent_temperature,is_day',

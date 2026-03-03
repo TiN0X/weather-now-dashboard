@@ -193,6 +193,7 @@ export type CurrentForecast = {
 export type HourlyForecast = {
   id: string,
   rawDate: Date,
+  utcSeconds: number,
   temp: number,
   formattedHour: string,
   icon: number,

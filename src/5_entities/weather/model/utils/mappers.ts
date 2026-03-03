@@ -5,6 +5,7 @@ import type {
   MappedDailyForecast,
   MappedGeocodingArray,
   MappedGeolocation,
+  MappedHourlyForecast,
   MappedWeatherResponse,
   WeatherResponseDTO
 } from '@entities/weather/types.ts'
@@ -32,12 +33,13 @@ export const mapCurrentForecast = (data: WeatherResponseDTO): MappedCurrentForec
   };
 };
 
-export const mapHourlyForecast = (data: WeatherResponseDTO) => {
+export const mapHourlyForecast = (data: WeatherResponseDTO): MappedHourlyForecast => {
   const { time, temperature_2m, weather_code } = data.hourly;
 
   return time.map((t: string, index: number) => ({
     id: t,
     rawDate: new Date(t),
+    utcSeconds: data.utc_offset_seconds,
     temp: Math.round(temperature_2m[index]),
     icon: weather_code[index],
     formattedHour: new Date(t).toLocaleTimeString(userLocale, {
