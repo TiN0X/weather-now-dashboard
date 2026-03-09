@@ -1,5 +1,5 @@
 import {createSlice, type PayloadAction} from '@reduxjs/toolkit'
-import type {CoordinatesResponse} from '@pages/weatherPage/types.ts'
+import type {CoordinatesResponse} from '@pages/weather-page/types.ts'
 import type {LocationState} from '@entities/weather/types.ts'
 
 const initialState: LocationState = {

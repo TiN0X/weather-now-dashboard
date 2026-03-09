@@ -1,6 +1,6 @@
 import React from 'react';
-import Select from '@shared/ui/other/Select/Select.tsx'
-import Icon from '@shared/ui/icons/IconSetting/IconSetting.tsx'
+import Select from '@shared/ui/other/select/Select.tsx'
+import Icon from '@shared/ui/icons/icon-setting/IconSetting.tsx'
 import classes from '@entities/units/ui/SelectUnits.module.scss'
 import type {SelectUnitsProps} from '@entities/units/types.ts'
 

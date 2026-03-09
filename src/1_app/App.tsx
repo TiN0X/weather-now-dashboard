@@ -1,5 +1,5 @@
 import Layout from '@app/layout/ui/Layout.tsx'
-import WeatherPage from '@pages/weatherPage/ui/WeatherPage.tsx'
+import WeatherPage from '@pages/weather-page/ui/WeatherPage.tsx'
 
 function App() {
   return (
