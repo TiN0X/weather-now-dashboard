@@ -21,7 +21,7 @@ This project was engineered for speed and efficiency, especially for low-bandwid
 * Styling: SCSS with CSS Modules for scoped and maintainable styles.
 
 ## Installation
-1. Clone the repository: `git clone https://github.com/TiN0X/weather-now-dashboard.git`
+1. Clone the repository: `git clone https://github.com/tin0x/weather-now-dashboard.git`
 2. Copy the contents of `.env.example` to `.env.local`
 3. Install dependencies: `npm install`
 4. Run development server: `npm run dev`
